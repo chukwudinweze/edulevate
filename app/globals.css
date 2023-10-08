@@ -80,3 +80,6 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+/* import uploadthing css */
+@import "~@uploadthing/react/styles.css";
