@@ -43,12 +43,14 @@ export const AttachmentForm = ({
   };
 
   const onDelete = async (id: string) => {
+    console.log(id);
+
     try {
       setDeletingId(id);
-      await axios.delete(`api/courses/${courseId}/attachements/${id}`);
+      await axios.delete(`/api/courses/${courseId}/attachements/${id}`);
       toast.success("Attachment deleted");
       router.refresh();
-    } catch {
+    } catch (error) {
       toast.error("Something went wrong");
     } finally {
       setDeletingId(null);
