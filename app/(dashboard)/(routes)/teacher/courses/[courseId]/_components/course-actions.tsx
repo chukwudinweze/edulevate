@@ -36,7 +36,7 @@ const CourseActions = ({
         await axios.patch(`/api/courses/${courseId}/publish`);
         toast.success("Course published");
         router.refresh();
-        confetti.onOpen;
+        confetti.onOpen();
       }
     } catch (error) {
       toast.error("Something went wrong");
@@ -82,3 +82,5 @@ const CourseActions = ({
 };
 
 export default CourseActions;
+
+// 6:42:14
