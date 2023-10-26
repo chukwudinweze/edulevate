@@ -33,7 +33,6 @@ const ChapterVideoForm = ({
   const router = useRouter();
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
     try {
       await axios.patch(
         `/api/courses/${courseId}/chapters/${chapterId}`,
